@@ -16,5 +16,10 @@ public class Main {
         Company company = new Company("SAP", LocalDate.of(2020,01,01), 5000);
         //CompanyDao.createCompany(company);
         System.out.println(CompanyDao.getCompanyById(2));
+
+        Company company1 = CompanyDao.getCompanyById(1);
+        //CompanyDao.deleteCompany(company1);
+        CompanyDao.companiesFindByInitialCapitalBetween(100, 100000)
+                .stream().forEach(System.out::println);
     }
 }
